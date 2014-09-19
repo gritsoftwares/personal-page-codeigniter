@@ -27,7 +27,7 @@ admin@admin.com
 password
 ```
 For sure you can change email/pass in admin panel
-* configure js ([disqus_shortname](/application/views/front/blog_post.php), [ckeditor config](/public/admin/js/ckeditor/config.js), [kcfinder config](/public/admin/js/kcfinder/conf/config.php) and [kcfinder access](/public/admin/js/kcfinder/conf/browse.php))
+* configure js ([disqus_shortname](/application/views/front/blog_post.php), [ckeditor config](/public/admin/js/ckeditor/config.js), [kcfinder config](/public/admin/js/kcfinder/conf/config.php) and [kcfinder access](/public/admin/js/kcfinder/browse.php))
 * if you are using custom SMTP settings on your host, be sure to provide them to [email method](/application/controllers/welcome.php)
 
 ####TODO list
