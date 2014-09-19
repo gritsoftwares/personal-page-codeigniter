@@ -1,0 +1,5 @@
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-left: -7px;
+    margin-right: -8px;
+}
+

@@ -1,0 +1,20 @@
+.tile {
+    position: relative;
+    padding-top: 30px;
+}
+.tile h1 {
+    font-size:30px;
+}
+.tile i {
+    font-size:36px;
+}
+.tile span.count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 20px;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    font-weight:bold;
+}
