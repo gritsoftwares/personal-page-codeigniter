@@ -283,4 +283,13 @@ class Portfolio_Items_model extends MY_Model {
         return TRUE;
     }
 
+    public function delete($id)
+    {
+	parent::delete($id);
+
+	unlink(UPLOAD_DIR_PORTFOLIO.'img'.$id.'_big.jpg');
+	unlink(UPLOAD_DIR_PORTFOLIO.'img'.$id.'_small.jpg');
+
+	return TRUE;
+    }
 }
