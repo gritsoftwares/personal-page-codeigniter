@@ -20,13 +20,14 @@ Other screenshot are available at [_screenshots](/_screenshots) folder
 * use Composer to update [codeigniter-forensics](https://github.com/lonnieezell/codeigniter-forensics). Of course, application will work without if, but I find this lib more convinient than built-in profiler. However, some of Ajax in admin panel won't work if it's turned on. Turn it on/off in [MY_Controller](/application/core/MY_Controller.php)
 * install db in [_database](/_database) folder. The only thing you might need to update here to your taste is websites table (list of websites), and skill_levels table (range and rating scale of levels)
 * in [index.php](/public/index.php) just change line 24 if you are using application in your development environment
-* change configuration in application/config ([config](/application/config/development/config.php), [database](/application/config/development/database.php), [twitter](/application/config/twitter.php) files)
+* change configuration in application/config ([config](/application/config/development/config.php), [database](/application/config/development/database.php), [twitter](/application/config/twitter.php) files), domain name in application/views/front/404.php
 * connect to /panel with
 ```text
 admin@admin.com
 password
 ```
 For sure you can change email/pass in admin panel
+* if your edits in admin panel are not applied immediately, you may want to comment out caching in application/controllers/welcome.php
 * configure js ([disqus_shortname](/application/views/front/blog_post.php), [ckeditor config](/public/admin/js/ckeditor/config.js), [kcfinder config](/public/admin/js/kcfinder/conf/config.php) and [kcfinder access](/public/admin/js/kcfinder/browse.php))
 * if you are using custom SMTP settings on your host, be sure to provide them to [email method](/application/controllers/welcome.php)
 
