@@ -285,11 +285,19 @@ class Portfolio_Items_model extends MY_Model {
 
     public function delete($id)
     {
-	parent::delete($id);
+    	parent::delete($id);
 
-	unlink(UPLOAD_DIR_PORTFOLIO.'img'.$id.'_big.jpg');
-	unlink(UPLOAD_DIR_PORTFOLIO.'img'.$id.'_small.jpg');
+        $this->delete_port_cat($id);
 
-	return TRUE;
+    	unlink(UPLOAD_DIR_PORTFOLIO.'img'.$id.'_big.jpg');
+    	unlink(UPLOAD_DIR_PORTFOLIO.'img'.$id.'_small.jpg');
+
+    	return TRUE;
+    }
+
+    protected function delete_port_cat($id)
+    {
+        $this->db->delete('port_cat', array('portfolio_id' => $id)); 
+        return TRUE;
     }
 }
