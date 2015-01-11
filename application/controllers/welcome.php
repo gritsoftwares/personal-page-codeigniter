@@ -79,7 +79,7 @@ class Welcome extends Frontend_Controller {
         $this->load_view('layouts/home');
 
         // Cache home page for 1 hour
-        $this->output->cache(3600);
+        $this->output->cache(60);
 	}
 
     /**
@@ -113,7 +113,7 @@ class Welcome extends Frontend_Controller {
         }
 
         // Cache home page for 1 hour
-        $this->output->cache(3600);
+        $this->output->cache(60);
     }
 
     /**
@@ -148,7 +148,7 @@ class Welcome extends Frontend_Controller {
         $this->load_view('layouts/resume');
 
         // Cache home page for 1 hour
-        $this->output->cache(3600);
+        $this->output->cache(60);
     }
 
     /**
@@ -184,7 +184,7 @@ class Welcome extends Frontend_Controller {
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
 
-                $this->email->from('info@mypersonal.local', 'Mypersonal feedback form');
+                $this->email->from('test@alkrav.com', 'Mypersonal feedback form');
                 $this->email->reply_to($this->input->post('email'), $this->input->post('name'));
                 $this->email->to($user_email);
                 $this->email->subject($this->input->post('subject'));
